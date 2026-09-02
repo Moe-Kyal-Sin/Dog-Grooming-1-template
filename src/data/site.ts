@@ -1,5 +1,5 @@
 /**
- * GLAMOUR POOCH CONTENT
+ * DOGGIE STYLE CONTENT
  * ---------------------
  * Replace every value marked PLACEHOLDER before launch. Image imports live here
  * too, so new salon photography can be swapped without touching components.
@@ -12,8 +12,8 @@ import ralphImage from '../assets/images/ralph-schnauzer.png';
 
 export const site = {
   business: {
-    name: 'Boswall Dog Grooming',
-    shortName: 'GP',
+    name: 'Doggie Style',
+    shortName: 'DS',
     tagline: 'Good dogs. Great hair.',
     description:
       'One-to-one professional grooming in Edinburgh, delivered with patience, personality and plenty of affection.',
@@ -21,7 +21,7 @@ export const site = {
     phoneHref: '#contact-details', // PLACEHOLDER: replace with tel:+44...
     address: 'Edinburgh address to come', // PLACEHOLDER
     bookingHref: '#booking-details', // PLACEHOLDER: replace with real booking URL
-    instagramLabel: '@glamourpooch', // PLACEHOLDER
+    instagramLabel: '@doggiestyle', // PLACEHOLDER
     instagramHref: '#contact-details', // PLACEHOLDER
     mapHref: '#contact-details', // PLACEHOLDER
     email: 'hello@example.com', // PLACEHOLDER
