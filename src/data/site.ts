@@ -12,7 +12,7 @@ import ralphImage from '../assets/images/ralph-schnauzer.png';
 
 export const site = {
   business: {
-    name: 'Glamour Pooch',
+    name: 'Lisa’s Little Angels',
     shortName: 'GP',
     tagline: 'Good dogs. Great hair.',
     description:
@@ -133,12 +133,12 @@ export const site = {
       role: 'Founder & dog person', // PLACEHOLDER
       bio: 'Owner Story: their approach to grooming, what they love about the work, and the personality behind the studio.', // PLACEHOLDER
       image: ralphImage, // PLACEHOLDER: replace with groomer portrait
-      imageAlt: 'Editorial portrait placeholder — replace with a photograph of the Glamour Pooch groomer',
+      imageAlt: 'Editorial portrait placeholder ',
     },
   ],
   reviews: [
     {
-      quote: 'Add a short, genuine client review here once permission has been confirmed.',
+      quote: 'Add a short, genuine client review here ',
       credit: 'Client name · review placeholder',
     },
     {
