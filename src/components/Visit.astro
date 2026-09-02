@@ -1,0 +1,47 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="visit section" id="visit" aria-labelledby="visit-title">
+  <p class="section-kicker label">Your next appointment / 07</p>
+  <h2 id="visit-title" data-reveal>Ready for their<br /><em>next look?</em></h2>
+
+  <div class="visit__grid" data-reveal>
+    <div class="visit__actions">
+      <a class="button button--yellow button--large" href={site.business.bookingHref} id="booking-details">
+        {site.ctas.primary}<span aria-hidden="true">↗</span>
+      </a>
+      <a class="button button--outline button--large" href={site.business.phoneHref}>
+        {site.ctas.phone}<span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <address class="visit__details" id="contact-details">
+      <div><span>Find us</span><p>{site.business.address}</p></div>
+      <div><span>Phone</span><p>{site.business.phoneDisplay}</p></div>
+      <div><span>Instagram</span><a href={site.business.instagramHref}>{site.business.instagramLabel}</a></div>
+      <div><span>Email</span><a href={`mailto:${site.business.email}`}>{site.business.email}</a></div>
+    </address>
+
+    <div class="visit__hours">
+      <span class="label">Opening hours</span>
+      {site.hours.map((entry) => <p><b>{entry.days}</b><span>{entry.time}</span></p>)}
+    </div>
+
+    <a class="visit__map" href={site.business.mapHref} aria-label="Open Glamour Pooch location in maps">
+      <span class="visit__map-grid" aria-hidden="true"></span>
+      <span class="visit__pin" aria-hidden="true">GP</span>
+      <strong>Edinburgh<br />Find the studio</strong>
+      <small>{site.ctas.directions} ↗</small>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__wordmark"><span>Glamour</span><span>Pooch</span></div>
+  <div class="footer__bottom">
+    <p>Independent dog grooming · Edinburgh</p>
+    <a href="#top">Back to top ↑</a>
+    <p>© {new Date().getFullYear()} {site.business.name}</p>
+  </div>
+</footer>

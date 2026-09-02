@@ -1,0 +1,27 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="services section" id="services" aria-labelledby="services-title">
+  <header class="services__header" data-reveal>
+    <p class="section-kicker label">The grooming menu / 02</p>
+    <h2 id="services-title">Pick their<br /><em>next look.</em></h2>
+    <p>Thoughtful grooming, shaped around the dog in front of us.</p>
+  </header>
+
+  <ol class="service-list">
+    {site.services.map((service) => (
+      <li class="service-entry" data-reveal>
+        <span class="service-entry__number">{service.number}</span>
+        <div class="service-entry__title">
+          <h3>{service.name}</h3>
+          <p>{service.strapline}</p>
+        </div>
+        <p class="service-entry__description">{service.description}</p>
+        <a href={site.business.bookingHref} class="service-entry__price">
+          {service.price}<span aria-hidden="true">↗</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</section>

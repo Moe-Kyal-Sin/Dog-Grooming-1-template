@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import { site } from '../data/site';
+---
+
+<section class="pooches section" aria-labelledby="pooches-title">
+  <header class="pooches__header" data-reveal>
+    <p class="section-kicker label">Meet the pooches / 03</p>
+    <h2 id="pooches-title">Fresh from<br /><em>the chair.</em></h2>
+    <p>Some very good dogs wearing very good hair.</p>
+  </header>
+
+  <div class="gallery">
+    {site.gallery.map((dog, index) => (
+      <article class:list={['gallery-card', dog.className]} data-reveal tabindex="0">
+        <div class="gallery-card__image-wrap">
+          <Image
+            class="gallery-card__image"
+            src={dog.image}
+            alt={dog.alt}
+            widths={[420, 620, 860]}
+            sizes={index === 0 ? '(max-width: 700px) 88vw, 46vw' : '(max-width: 700px) 76vw, 30vw'}
+            format="webp"
+            loading="lazy"
+          />
+          <span class="gallery-card__count label">0{index + 1} / 04</span>
+        </div>
+        <div class="gallery-card__caption">
+          <div><h3>{dog.name}</h3><p>{dog.title}</p></div>
+          <dl>
+            <div><dt>Breed</dt><dd>{dog.breed}</dd></div>
+            <div><dt>Look</dt><dd>{dog.style}</dd></div>
+          </dl>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

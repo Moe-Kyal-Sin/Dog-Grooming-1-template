@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets';
+import { site } from '../data/site';
+---
+
+<section class="transformations section" id="transformations" aria-labelledby="transformations-title">
+  <div class="section-kicker label">The glow-up / 01</div>
+  <div class="transformations__heading" data-reveal>
+    <h2 id="transformations-title">From scruffy<br /><em>to showstopper.</em></h2>
+    <p>Every groom is adapted to the dog’s coat, breed, lifestyle and comfort. Slide to see the difference.</p>
+  </div>
+
+  <div class="comparison-wrap" data-reveal>
+    <div class="comparison" data-comparison style="--position: 50%">
+      <Image
+        class="comparison__image comparison__image--before"
+        src={site.images.transformation.before.src}
+        alt={site.images.transformation.before.alt}
+        widths={[540, 760, 1080]}
+        sizes="(max-width: 800px) 94vw, 60vw"
+        format="webp"
+        loading="lazy"
+      />
+      <div class="comparison__after" aria-hidden="true">
+        <Image
+          class="comparison__image comparison__image--after"
+          src={site.images.transformation.after.src}
+          alt=""
+          widths={[540, 760, 1080]}
+          sizes="(max-width: 800px) 94vw, 60vw"
+          format="webp"
+          loading="lazy"
+        />
+      </div>
+      <span class="comparison__label comparison__label--before">Before</span>
+      <span class="comparison__label comparison__label--after">After</span>
+      <div class="comparison__line" aria-hidden="true"><span>↔</span></div>
+      <input
+        class="comparison__range"
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        aria-label="Reveal the groomed result"
+        aria-valuetext="50 percent after grooming revealed"
+      />
+    </div>
+    <p class="comparison__note label">Drag / tap / use arrow keys</p>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-comparison]').forEach((comparison) => {
+    const input = comparison.querySelector<HTMLInputElement>('.comparison__range');
+    input?.addEventListener('input', () => {
+      const value = input.value;
+      comparison.style.setProperty('--position', `${value}%`);
+      input.setAttribute('aria-valuetext', `${value} percent after grooming revealed`);
+    });
+  });
+</script>

@@ -1,0 +1,20 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="reviews section" aria-labelledby="reviews-title">
+  <header class="reviews__header" data-reveal>
+    <p class="section-kicker label">Nice words / 06</p>
+    <h2 id="reviews-title">The word<br /><em>on the street.</em></h2>
+  </header>
+  <div class="reviews__layout">
+    {site.reviews.map((review, index) => (
+      <figure class:list={['review', `review--${index + 1}`]} data-reveal>
+        <span class="review__mark" aria-hidden="true">“</span>
+        <blockquote>{review.quote}</blockquote>
+        <figcaption>{review.credit}</figcaption>
+      </figure>
+    ))}
+    <p class="reviews__note label">Testimonials shown are clearly marked placeholders pending approved client copy.</p>
+  </div>
+</section>

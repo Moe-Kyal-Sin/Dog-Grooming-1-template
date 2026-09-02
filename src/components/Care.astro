@@ -1,0 +1,19 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="care section" aria-labelledby="care-title">
+  <p class="section-kicker label">The important bit / 04</p>
+  <div class="care__heading" data-reveal>
+    <h2 id="care-title">Glamorous results.<br /><em>Gentle treatment.</em></h2>
+  </div>
+  <div class="care__body" data-reveal>
+    <p class="care__intro">A brilliant groom begins with a dog who feels safe, seen and listened to.</p>
+    <ol class="care__list">
+      {site.carePoints.map((point, index) => (
+        <li><span>{String(index + 1).padStart(2, '0')}</span>{point}</li>
+      ))}
+    </ol>
+  </div>
+  <p class="care__aside label" aria-hidden="true">Kind hands<br />Calm dogs<br />Great hair</p>
+</section>
