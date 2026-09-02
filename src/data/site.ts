@@ -14,7 +14,7 @@ export const site = {
   business: {
     name: 'Dog Daze',
     shortName: 'GP',
-    tagline: 'Good dogs. Great hair.',
+    tagline: 'Good dog. Great hair.',
     description:
       'One-to-one professional grooming in Edinburgh, delivered with patience, personality and plenty of affection.',
     phoneDisplay: 'Phone number to come', // PLACEHOLDER
