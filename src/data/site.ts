@@ -12,7 +12,7 @@ import ralphImage from '../assets/images/ralph-schnauzer.png';
 
 export const site = {
   business: {
-    name: 'Boswall Dog Grooming',
+    name: 'Dog Daze Dog Grooming',
     shortName: 'GP',
     tagline: 'Good dogs. Great hair.',
     description:
