@@ -1,4 +1,4 @@
-# Doggie Style website concept
+# Glamour Pooch website concept
 
 A responsive one-page Astro concept for an independent Edinburgh dog-grooming studio.
 
